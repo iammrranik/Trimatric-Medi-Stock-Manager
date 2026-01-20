@@ -14,3 +14,18 @@ include_once '../model/moderatorModel.php';
     <link rel="stylesheet" href="Design/moderatorDesign.css">
 </head>
 <body>
+
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h2>TRIMATRIC</h2>
+        <span class="role-badge">Moderator Access</span>
+    </div>
+    <nav>
+        <button class="side-btn" onclick="showTab('inventory')">📦 Inventory</button>
+        <button class="side-btn" onclick="showTab('patients')">👥 Patients</button>
+        <button class="side-btn" onclick="showTab('payments')">💰 Payments</button>
+        <hr class="nav-divider">
+        <button class="side-btn reload-btn" onclick="window.location.reload();">↻ Refresh</button>
+        <a href="../controller/moderatorController.php?action=logout" class="side-btn logout-link">Logout ⏻</a>
+    </nav>
+</div>
