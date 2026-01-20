@@ -1,0 +1,377 @@
+/* ------------------ GLOBAL RESET ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+}
+
+.section {
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1a365d;
+}
+
+/* ------------------ HEADER & NAV ------------------ */
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1a365d;
+}
+
+.logo span {
+    color: #2f855a;
+}
+
+nav a {
+    margin-left: 25px;
+    font-weight: 600;
+    color: #2d3748;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2f855a;
+}
+
+.login-btn-header {
+    background: #2f855a;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+
+/* ------------------ HERO SECTION ------------------ */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(26,54,93,0.6), rgba(26,54,93,0.6)),
+                url('https://images.unsplash.com/photo-1580281657521-6f5a4c9c05b7') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.hero-btns a {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: 0 8px;
+}
+
+.cta-primary {
+    background: #2f855a;
+    color: white;
+}
+
+.cta-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+/* ------------------ DOCTORS SECTION ------------------ */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.doc-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.doc-card:hover {
+    transform: translateY(-8px);
+}
+
+.doc-avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.specialty {
+    color: #2f855a;
+    font-weight: 700;
+}
+
+/* ------------------ MEDICAL TABLE ------------------ */
+.table-wrapper {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+thead {
+    background: #1a365d;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.status-available {
+    color: #2f855a;
+    font-weight: 700;
+}
+
+.status-booking {
+    color: #d69e2e;
+    font-weight: 700;
+}
+
+/* ------------------ CONTACT SECTION (PREMIUM CARD) ------------------ */
+.contact-main-card {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 3.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eef2f6;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Policy Banner */
+.serial-policy-banner {
+    background: #fff9e6;
+    border-radius: 15px;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+    border: 1px solid #ffeeba;
+}
+
+.policy-icon {
+    font-size: 1.6rem;
+}
+
+.serial-policy-banner p {
+    color: #856404;
+    font-size: 0.95rem;
+}
+
+/* Grid */
+.contact-box-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Info Card */
+.info-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 2.5rem 1.8rem;
+    border-radius: 22px;
+    text-align: center;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: #2f855a;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card:hover {
+    background: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    color: #1a365d;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.card-content p {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.emergency {
+    color: #e53e3e;
+}
+
+/* Tag */
+.card-tag {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #4a5568;
+    background: #e2e8f0;
+    padding: 5px 14px;
+    border-radius: 50px;
+    align-self: center;
+}
+
+/* Social Card */
+.social-card-alt {
+    background: #1a365d;
+    border: none;
+}
+
+.social-card-alt h3,
+.social-note {
+    color: white;
+}
+
+.social-note {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+
+.social-flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.soc-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.soc-btn:hover {
+    background: #2f855a;
+    transform: scale(1.15);
+}
+
+.social-card-alt .card-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    background: #1a365d;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+
+    nav {
+        display: none; /* later you can add mobile menu */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-main-card {
+        padding: 2rem 1.5rem;
+    }
+}
