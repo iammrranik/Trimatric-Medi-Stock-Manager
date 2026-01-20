@@ -25,33 +25,3 @@ function modSaveInventory($id, $d) {
         return mysqli_query($conn, "UPDATE inventory SET product_name='$p', purchase_date='$pd', quantity='$q', category='$c', expire_date='$ed', status='$s' WHERE id='$id'");
     }
 }
-
-// SAVE PATIENT
-function modSavePatient($serial, $d) {
-    global $conn;
-    $n = mysqli_real_escape_string($conn, $d['patient_name']);
-    $ph = mysqli_real_escape_string($conn, $d['phone_no']);
-    $t = mysqli_real_escape_string($conn, $d['record_task_type']);
-
-    if (empty($serial)) {
-        return mysqli_query($conn, "INSERT INTO patients (patient_name, phone_no, record_task_type) VALUES ('$n','$ph','$t')");
-    } else {
-        return mysqli_query($conn, "UPDATE patients SET patient_name='$n', phone_no='$ph', record_task_type='$t' WHERE patient_serial='$serial'");
-    }
-}
-
-// SAVE PAYMENT
-function modSavePayment($pay_id, $d) {
-    global $conn;
-    $n = mysqli_real_escape_string($conn, $d['patient_name']);
-    $ph = mysqli_real_escape_string($conn, $d['phone_no']);
-    $a = mysqli_real_escape_string($conn, $d['amount']);
-    $s = mysqli_real_escape_string($conn, $d['patient_serial']);
-
-    if (empty($pay_id)) {
-        return mysqli_query($conn, "INSERT INTO payments (patient_name, phone_no, amount, patient_serial) VALUES ('$n','$ph','$a','$s')");
-    } else {
-        return mysqli_query($conn, "UPDATE payments SET patient_name='$n', phone_no='$ph', amount='$a', patient_serial='$s' WHERE payment_id='$pay_id'");
-    }
-}
-?>
