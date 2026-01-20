@@ -25,34 +25,93 @@ if (isset($_GET['del']) && isset($_GET['type'])) {
     exit();
 }
 
+// 2.5 SEARCH LOGIC
+if (isset($_GET['search_type']) && isset($_GET['search_term'])) {
+    $search_type = $_GET['search_type'];
+    $search_term = $_GET['search_term'];
+    
+    if ($search_type == 'users') {
+        $result = searchUsers($search_term);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+    } elseif ($search_type == 'inventory') {
+        $result = searchInventory($search_term);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+    } elseif ($search_type == 'patients') {
+        $result = searchPatients($search_term);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+    } elseif ($search_type == 'payments') {
+        $result = searchPayments($search_term);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+    }
+}
+
 // 3. SAVE / UPDATE LOGIC (Routing to Model Functions)
 
 // Process User
 if (isset($_POST['save_user'])) {
-    saveUser($_POST['old_username'], $_POST);
-    header("Location: ../view/adminPage.php?msg=success");
+    $result = saveUser($_POST['old_username'], $_POST);
+    if ($result) {
+        header("Location: ../view/adminPage.php?msg=success");
+    } else {
+        header("Location: ../view/adminPage.php?msg=error&error=User save failed");
+    }
     exit();
 }
 
 // Process Inventory
 if (isset($_POST['save_inv'])) {
-    saveInventory($_POST['id'], $_POST);
-    header("Location: ../view/adminPage.php?msg=success");
+    $result = saveInventory($_POST['id'], $_POST);
+    if ($result) {
+        header("Location: ../view/adminPage.php?msg=success");
+    } else {
+        header("Location: ../view/adminPage.php?msg=error&error=Inventory save failed");
+    }
     exit();
 }
 
 // Process Patient
 if (isset($_POST['save_pat'])) {
-    savePatient($_POST['patient_serial'], $_POST);
-    header("Location: ../view/adminPage.php?msg=success");
+    $result = savePatient($_POST['patient_serial'], $_POST);
+    if ($result) {
+        header("Location: ../view/adminPage.php?msg=success");
+    } else {
+        header("Location: ../view/adminPage.php?msg=error&error=Patient save failed");
+    }
     exit();
 }
 
 // Process Payment (Fixed to use the Model Function)
 if (isset($_POST['save_pay'])) {
-    // We call the function we added to adminModel.php
-    savePayment($_POST['payment_id'], $_POST); 
-    header("Location: ../view/adminPage.php?msg=success");
+    $result = savePayment($_POST['payment_id'], $_POST);
+    if ($result) {
+        header("Location: ../view/adminPage.php?msg=success");
+    } else {
+        header("Location: ../view/adminPage.php?msg=error&error=Payment save failed");
+    }
     exit();
 }
 

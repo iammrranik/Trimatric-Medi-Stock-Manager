@@ -82,4 +82,38 @@ function savePayment($pay_id, $d) {
         return mysqli_query($conn, "UPDATE payments SET patient_name='$n', phone_no='$ph', amount='$a', patient_serial='$s' WHERE payment_id='$pay_id'");
     }
 }
+
+// ============= SEARCH FUNCTIONS =============
+
+// SEARCH USERS
+function searchUsers($searchTerm) {
+    global $conn;
+    $search = mysqli_real_escape_string($conn, '%' . $searchTerm . '%');
+    $query = "SELECT * FROM users WHERE username LIKE '$search' OR full_name LIKE '$search' OR email LIKE '$search' OR phone_no LIKE '$search'";
+    return mysqli_query($conn, $query);
+}
+
+// SEARCH INVENTORY
+function searchInventory($searchTerm) {
+    global $conn;
+    $search = mysqli_real_escape_string($conn, '%' . $searchTerm . '%');
+    $query = "SELECT * FROM inventory WHERE product_name LIKE '$search' OR category LIKE '$search'";
+    return mysqli_query($conn, $query);
+}
+
+// SEARCH PATIENTS
+function searchPatients($searchTerm) {
+    global $conn;
+    $search = mysqli_real_escape_string($conn, '%' . $searchTerm . '%');
+    $query = "SELECT * FROM patients WHERE patient_name LIKE '$search' OR phone_no LIKE '$search' OR patient_serial LIKE '$search'";
+    return mysqli_query($conn, $query);
+}
+
+// SEARCH PAYMENTS
+function searchPayments($searchTerm) {
+    global $conn;
+    $search = mysqli_real_escape_string($conn, '%' . $searchTerm . '%');
+    $query = "SELECT * FROM payments WHERE patient_name LIKE '$search' OR phone_no LIKE '$search' OR patient_serial LIKE '$search'";
+    return mysqli_query($conn, $query);
+}
 ?>
