@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* ---------------- SIDEBAR (VERTICAL STYLE) ---------------- */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #2c3e50, #1f2d3a);
+    color: white;
+    height: 100vh;
+    padding: 25px 15px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Logo */
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.sidebar nav {
+    flex: 1;
+}
+
+/* Sidebar Buttons (Vertical Menu Items) */
+.side-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 18px;
+    margin-bottom: 8px;
+    background: transparent;
+    color: #bdc3c7;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Hover Effect */
+.side-btn:hover {
+    background-color: #34495e;
+    color: white;
+    padding-left: 28px;
+}
+
+/* Left Accent Line on Hover */
+.side-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #3498db;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.side-btn:hover::before {
+    opacity: 1;
+}
+
+/* Active Button (optional – add class="active") */
+.side-btn.active {
+    background: #34495e;
+    color: white;
+}
+
+.side-btn.active::before {
+    opacity: 1;
+}
+
+/* Logout Button */
+.logout-link {
+    background-color: #c0392b !important;
+    color: white !important;
+    margin-top: 40px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+
+.logout-link:hover {
+    background-color: #e74c3c !important;
+    padding-left: 18px;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* ---------------- TABLE ---------------- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.data-table th {
+    background: #ecf0f1;
+    padding: 15px;
+    text-align: left;
+    color: #7f8c8d;
+    font-weight: 700;
+}
+
+.data-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn-add {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #2ecc71;
+}
+
+.btn-edit {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-del {
+    background: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* ---------------- MODAL ---------------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-save {
+    background: #2c3e50;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-cancel {
+    width: 100%;
+    background: #eee;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
