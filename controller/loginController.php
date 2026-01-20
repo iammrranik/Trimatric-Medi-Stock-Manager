@@ -21,3 +21,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             setcookie("user_login", $userData['username'], time() + 1800, "/");
             setcookie("user_role", $userData['role'], time() + 1800, "/");
         }
+          // 3. Role-Based Redirection
+        if ($userData['role'] == 'Admin') {
+            header("Location: ../view/adminPage.php");
+        } elseif ($userData['role'] == 'Moderator') {
+            header("Location: ../view/moderatorPage.php");
+        } else {
+            header("Location: ../view/staffPage.php");
+        }
+        exit();
+    } else {
+        // Redirect back with error if login fails
+        header("Location: ../view/loginPage.php?error=1");
+        exit();
+    }
+}
+?>
