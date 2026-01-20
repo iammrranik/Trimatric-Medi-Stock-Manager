@@ -1,0 +1,86 @@
+:root {
+    --primary-navy: #1e3c72;
+    --medical-green: #27ae60;
+    --text-dark: #334155;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: var(--white);
+    display: flex;
+    width: 850px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-section {
+    background: var(--primary-navy);
+    color: white;
+    padding: 3rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-section h1 { font-size: 2.5rem; margin-bottom: 0.5rem; letter-spacing: 2px; }
+.logo-section p { opacity: 0.8; font-weight: 300; }
+
+.form-section {
+    padding: 3rem;
+    flex: 1;
+}
+
+.form-header { margin-bottom: 2rem; }
+.form-header h2 { color: var(--primary-navy); margin-bottom: 0.5rem; }
+.form-header p { color: #64748b; font-size: 0.9rem; }
+
+.input-group { margin-bottom: 1.5rem; }
+.input-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--medical-green);
+    box-shadow: 0 0 10px rgba(39, 174, 96, 0.1);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--medical-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover { background: #219150; transform: translateY(-2px); }
+
+.footer-links { margin-top: 1.5rem; text-align: center; }
+.footer-links a { color: var(--primary-navy); text-decoration: none; font-size: 0.9rem; }
+.footer-links a:hover { text-decoration: underline; }

@@ -1,0 +1,44 @@
+/* --- Global --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; background-color: #f1f5f9; }
+
+/* --- Sidebar (Staff Blue Theme) --- */
+.sidebar {
+    width: 260px; height: 100vh; background-color: #1e293b; color: white;
+    position: fixed; padding: 30px 15px;
+}
+.sidebar-header h2 { color: #60a5fa; text-align: center; margin-bottom: 5px; }
+.role-badge { 
+    display: block; text-align: center; color: #94a3b8; 
+    font-size: 11px; margin-bottom: 30px; font-weight: bold;
+    background: #334155; padding: 3px 0; border-radius: 4px;
+}
+
+.side-btn {
+    display: block; width: 100%; padding: 12px; margin: 8px 0;
+    background: transparent; color: #cbd5e1; border: none; text-align: left;
+    cursor: pointer; border-radius: 8px; transition: 0.3s;
+}
+.side-btn:hover { background: #334155; color: #60a5fa; padding-left: 20px; }
+
+.logout-link { 
+    background: #7f1d1d; color: #fecaca; text-align: center; 
+    text-decoration: none; margin-top: 50px; display: block;
+    padding: 12px; border-radius: 8px; font-weight: bold;
+}
+
+/* --- Content --- */
+.main-content { margin-left: 260px; width: calc(100% - 260px); padding: 40px; }
+.header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.info-tag { background: #e2e8f0; color: #475569; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+
+/* --- Table & Status --- */
+.data-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.data-table th { background: #60a5fa; color: white; padding: 15px; text-align: left; }
+.data-table td { padding: 15px; border-bottom: 1px solid #f1f5f9; color: #334155; }
+
+.status-tag { padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+.status-valid { background: #d1fae5; color: #065f46; }
+.status-expired { background: #fee2e2; color: #991b1b; }
+
+.nav-divider { border: 0.5px solid #334155; margin: 20px 0; }
