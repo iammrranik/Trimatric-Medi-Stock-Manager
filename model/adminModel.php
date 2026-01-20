@@ -2,13 +2,15 @@
 include_once 'conModel.php';
 
 // READ: Generic fetch for any table
-function fetchAll($table) {
+function fetchAll($table)
+{
     global $conn;
     return mysqli_query($conn, "SELECT * FROM " . mysqli_real_escape_string($conn, $table));
 }
 
 // DELETE: Generic delete using specific primary keys
-function deleteRecord($table, $column, $value) {
+function deleteRecord($table, $column, $value)
+{
     global $conn;
     $table = mysqli_real_escape_string($conn, $table);
     $column = mysqli_real_escape_string($conn, $column);
@@ -17,7 +19,8 @@ function deleteRecord($table, $column, $value) {
 }
 
 // SAVE USER (8 Columns)
-function saveUser($old_user, $d) {
+function saveUser($old_user, $d)
+{
     global $conn;
     $u = mysqli_real_escape_string($conn, $d['username']);
     $f = mysqli_real_escape_string($conn, $d['full_name']);
@@ -36,7 +39,8 @@ function saveUser($old_user, $d) {
 }
 
 // SAVE INVENTORY (7 Columns)
-function saveInventory($id, $d) {
+function saveInventory($id, $d)
+{
     global $conn;
     $p = mysqli_real_escape_string($conn, $d['product_name']);
     $pd = mysqli_real_escape_string($conn, $d['purchase_date']);
@@ -53,7 +57,8 @@ function saveInventory($id, $d) {
 }
 
 // SAVE PATIENT (4 Columns)
-function savePatient($serial, $d) {
+function savePatient($serial, $d)
+{
     global $conn;
     $n = mysqli_real_escape_string($conn, $d['patient_name']);
     $ph = mysqli_real_escape_string($conn, $d['phone_no']);
@@ -67,7 +72,8 @@ function savePatient($serial, $d) {
 }
 
 // SAVE PAYMENT (NEW - 4 Columns)
-function savePayment($pay_id, $d) {
+function savePayment($pay_id, $d)
+{
     global $conn;
     $n = mysqli_real_escape_string($conn, $d['patient_name']);
     $ph = mysqli_real_escape_string($conn, $d['phone_no']);
@@ -82,5 +88,3 @@ function savePayment($pay_id, $d) {
         return mysqli_query($conn, "UPDATE payments SET patient_name='$n', phone_no='$ph', amount='$a', patient_serial='$s' WHERE payment_id='$pay_id'");
     }
 }
-
-?>
