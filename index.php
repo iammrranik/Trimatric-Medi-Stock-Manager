@@ -99,7 +99,55 @@
             </div>
         </section>
 
-        
+        <section id="contact" class="section contact-section">
+            <div class="contact-main-card">
+                <h2 class="section-title">Get In Touch</h2>
+
+                <!-- Policy Banner -->
+                <div class="serial-policy-banner">
+                    <span class="policy-icon">⚠️</span>
+                    <p><strong>Appointment Policy:</strong> We follow a strict <b>"First Call, First Serial"</b> system. Please call during office hours.</p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="contact-box-grid">
+
+                    <!-- Phone Card -->
+                    <div class="info-card">
+                        <div class="card-icon">📞</div>
+                        <h3>Phone</h3>
+                        <div class="card-content">
+                            <p>+880 1700-000000</p>
+                            <p>+880 2-9876543</p>
+                        </div>
+                        <span class="card-tag">Official Line</span>
+                    </div>
+
+                    <!-- Time Card -->
+                    <div class="info-card">
+                        <div class="card-icon">🕒</div>
+                        <h3>Calling Time</h3>
+                        <div class="card-content">
+                            <p>Sat – Thu : 9 AM – 8 PM</p>
+                            <p class="emergency">Friday : Emergency Only</p>
+                        </div>
+                        <span class="card-tag">Availability</span>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="info-card">
+                        <div class="card-icon">📍</div>
+                        <h3>Location</h3>
+                        <div class="card-content">
+                            <p>House 12, Road 5</p>
+                            <p>Dhanmondi, Dhaka</p>
+                        </div>
+                        <span class="card-tag">Visit Us</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
