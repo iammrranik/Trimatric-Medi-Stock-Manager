@@ -63,6 +63,42 @@
             </div>
         </section>
 
+        <section id="medical-tests" class="section">
+            <h2 class="section-title">Medical Test Prices</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Test Name</th>
+                            <th>Category</th>
+                            <th>Price (BDT)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Digital X-Ray</td>
+                            <td>Imaging</td>
+                            <td>৳ 800</td>
+                            <td class="status-available">Available</td>
+                        </tr>
+                        <tr>
+                            <td>ECG (12-Lead)</td>
+                            <td>Cardiac</td>
+                            <td>৳ 500</td>
+                            <td class="status-available">Available</td>
+                        </tr>
+                        <tr>
+                            <td>MRI (Brain)</td>
+                            <td>Advanced Imaging</td>
+                            <td>৳ 8,500</td>
+                            <td class="status-booking">Pre-book</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         
     </main>
 
