@@ -13,5 +13,4 @@ include_once '../model/moderatorModel.php';
     <title>Moderator Panel | Trimatric</title>
     <link rel="stylesheet" href="Design/moderatorDesign.css">
 </head>
-
-</html>
+<body>
