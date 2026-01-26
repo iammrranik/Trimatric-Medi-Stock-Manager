@@ -194,6 +194,7 @@ body {
     background: white;
     padding: 30px;
     border-radius: 12px;
+<<<<<<< HEAD
     width: 500px;
     max-height: 90vh;
     overflow-y: auto;
@@ -227,10 +228,20 @@ body {
     box-sizing: border-box;
 }
 
+=======
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
 .modal-content input,
 .modal-content select {
     width: 100%;
     padding: 10px;
+<<<<<<< HEAD
+=======
+    margin: 10px 0;
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -238,11 +249,16 @@ body {
 .btn-save {
     background: #2c3e50;
     color: white;
+<<<<<<< HEAD
     flex: 1;
+=======
+    width: 100%;
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
     padding: 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .btn-cancel {
@@ -250,6 +266,17 @@ body {
     background: #eee;
     border: none;
     padding: 12px;
+=======
+    margin-top: 10px;
+}
+
+.btn-cancel {
+    width: 100%;
+    background: #eee;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
     border-radius: 6px;
     cursor: pointer;
 }
@@ -361,6 +388,7 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
 }
+<<<<<<< HEAD
 /* ============= TOAST NOTIFICATIONS ============= */
 @keyframes slideIn {
     from {
@@ -383,3 +411,5 @@ body {
         opacity: 0;
     }
 }
+=======
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

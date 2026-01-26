@@ -35,6 +35,10 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
     </div>
 
     <div class="main-content">
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
         <div id="users" class="tab-pane">
             <div class="header-row">
                 <h1>Staff & Users</h1>
@@ -51,10 +55,13 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                     <tr>
                         <th>Username</th>
                         <th>Full Name</th>
+<<<<<<< HEAD
                         <th>NID</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Address</th>
+=======
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                         <th>Password</th>
                         <th>Role</th>
                         <th>Actions</th>
@@ -66,15 +73,22 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         <tr>
                             <td><?php echo $r['username']; ?></td>
                             <td><?php echo $r['full_name']; ?></td>
+<<<<<<< HEAD
                             <td><?php echo $r['nid']; ?></td>
                             <td><?php echo $r['email']; ?></td>
                             <td><?php echo $r['phone_no']; ?></td>
                             <td><?php echo $r['address']; ?></td>
+=======
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             <td><?php echo $r['password']; ?></td>
                             <td><?php echo $r['role']; ?></td>
                             <td>
                                 <button class="btn-edit" onclick='editUser(<?php echo json_encode($r); ?>)'>Edit</button>
+<<<<<<< HEAD
                                 <button class="btn-del" onclick="deleteRecord('users', '<?php echo urlencode($r['username']); ?>')">Delete</button>
+=======
+                                <a href="../controller/adminController.php?type=users&del=<?php echo urlencode($r['username']); ?>" class="btn-del">Delete</a>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             </td>
                         </tr>
                     <?php endwhile; ?>
@@ -115,7 +129,11 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                             <td><?php echo $r['status']; ?></td>
                             <td>
                                 <button class="btn-edit" onclick='editInv(<?php echo json_encode($r); ?>)'>Edit</button>
+<<<<<<< HEAD
                                 <button class="btn-del" onclick="deleteRecord('inv', '<?php echo $r['id']; ?>')">Delete</button>
+=======
+                                <a href="../controller/adminController.php?type=inv&del=<?php echo $r['id']; ?>" class="btn-del">Delete</a>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             </td>
                         </tr>
                     <?php endwhile; ?>
@@ -154,7 +172,11 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                             <td><?php echo $r['record_task_type']; ?></td>
                             <td>
                                 <button class="btn-edit" onclick='editPat(<?php echo json_encode($r); ?>)'>Edit</button>
+<<<<<<< HEAD
                                 <button class="btn-del" onclick="deleteRecord('pat', '<?php echo $r['patient_serial']; ?>')">Delete</button>
+=======
+                                <a href="../controller/adminController.php?type=pat&del=<?php echo $r['patient_serial']; ?>" class="btn-del">Delete</a>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             </td>
                         </tr>
                     <?php endwhile; ?>
@@ -195,7 +217,12 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                             <td><?php echo $r['patient_serial']; ?></td>
                             <td>
                                 <button class="btn-edit" onclick='editPay(<?php echo json_encode($r); ?>)'>Edit</button>
+<<<<<<< HEAD
                                 <button class="btn-del" onclick="deleteRecord('pay', '<?php echo $r['payment_id']; ?>')">Delete</button>
+=======
+                                <a href="../controller/adminController.php?type=pay&del=<?php echo $r['payment_id']; ?>"
+                                    class="btn-del" onclick="return confirm('Delete this payment?')">Delete</a>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             </td>
                         </tr>
                     <?php endwhile; ?>
@@ -207,6 +234,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
             <div class="modal-content">
                 <h2 id="u_title">User Form</h2>
                 <div id="userErrors" style="display:none; padding:10px; background-color:#f8d7da; color:#721c24; border-radius:4px; margin-bottom:10px;"></div>
+<<<<<<< HEAD
                 <form id="userForm" class="form-grid" onsubmit="return submitUserForm(event)">
                     <input type="hidden" name="old_username" id="old_username">
                     <div>
@@ -249,6 +277,24 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         <button type="submit" name="save_user" class="btn-save">Save User</button>
                         <button type="button" class="btn-cancel" onclick="closeModal('userModal')">Cancel</button>
                     </div>
+=======
+                <form action="../controller/adminController.php" method="POST" class="form-grid" onsubmit="return validateUserForm(event)">
+                    <input type="hidden" name="old_username" id="old_username">
+                    <input type="text" name="username" id="u_name" placeholder="Username" required>
+                    <input type="text" name="full_name" id="u_full" placeholder="Full Name" required>
+                    <input type="text" name="password" id="u_pass" placeholder="Password" required>
+                    <input type="text" name="nid" id="u_nid" placeholder="NID">
+                    <input type="email" name="email" id="u_email" placeholder="Email">
+                    <input type="text" name="phone_no" id="u_phone" placeholder="Phone">
+                    <input type="text" name="address" id="u_addr" placeholder="Address" style="grid-column: span 2;">
+                    <select name="role" id="u_role">
+                        <option>Admin</option>
+                        <option>Moderator</option>
+                        <option>Staff</option>
+                    </select>
+                    <button type="submit" name="save_user" class="btn-save">Save User</button>
+                    <button type="button" class="btn-cancel" onclick="closeModal('userModal')">Cancel</button>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                 </form>
             </div>
         </div>
@@ -257,6 +303,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
             <div class="modal-content">
                 <h2 id="i_title">Stock Form</h2>
                 <div id="invErrors" style="display:none; padding:10px; background-color:#f8d7da; color:#721c24; border-radius:4px; margin-bottom:10px;"></div>
+<<<<<<< HEAD
                 <form id="invForm" class="form-grid" onsubmit="return submitInventoryForm(event)">
                     <input type="hidden" name="id" id="i_id">
                     <div>
@@ -290,6 +337,21 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         <button type="submit" name="save_inv" class="btn-save">Save Item</button>
                         <button type="button" class="btn-cancel" onclick="closeModal('invModal')">Cancel</button>
                     </div>
+=======
+                <form action="../controller/adminController.php" method="POST" class="form-grid" onsubmit="return validateInventoryForm(event)">
+                    <input type="hidden" name="id" id="i_id">
+                    <input type="text" name="product_name" id="i_name" placeholder="Product Name" required>
+                    <input type="date" name="purchase_date" id="i_pdate" required>
+                    <input type="number" name="quantity" id="i_qty" placeholder="Quantity">
+                    <input type="text" name="category" id="i_cat" placeholder="Category">
+                    <input type="date" name="expire_date" id="i_edate" required>
+                    <select name="status" id="i_status">
+                        <option>Valid</option>
+                        <option>Expired</option>
+                    </select>
+                    <button type="submit" name="save_inv" class="btn-save">Save Item</button>
+                    <button type="button" class="btn-cancel" onclick="closeModal('invModal')">Cancel</button>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                 </form>
             </div>
         </div>
@@ -298,6 +360,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
             <div class="modal-content">
                 <h2 id="p_title">Patient Form</h2>
                 <div id="patErrors" style="display:none; padding:10px; background-color:#f8d7da; color:#721c24; border-radius:4px; margin-bottom:10px;"></div>
+<<<<<<< HEAD
                 <form id="patForm" class="form-grid" onsubmit="return submitPatientForm(event)">
                     <input type="hidden" name="patient_serial" id="p_serial">
                     <div>
@@ -316,6 +379,15 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         <button type="submit" name="save_pat" class="btn-save">Save Patient</button>
                         <button type="button" class="btn-cancel" onclick="closeModal('patModal')">Cancel</button>
                     </div>
+=======
+                <form action="../controller/adminController.php" method="POST" class="form-grid" onsubmit="return validatePatientForm(event)">
+                    <input type="hidden" name="patient_serial" id="p_serial">
+                    <input type="text" name="patient_name" id="p_name" placeholder="Name" required>
+                    <input type="text" name="phone_no" id="p_phone" placeholder="Phone" required>
+                    <input type="text" name="record_task_type" id="p_task" placeholder="Task Type">
+                    <button type="submit" name="save_pat" class="btn-save">Save Patient</button>
+                    <button type="button" class="btn-cancel" onclick="closeModal('patModal')">Cancel</button>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                 </form>
             </div>
         </div>
@@ -324,6 +396,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
             <div class="modal-content">
                 <h2 id="pay_title">Payment Record</h2>
                 <div id="payErrors" style="display:none; padding:10px; background-color:#f8d7da; color:#721c24; border-radius:4px; margin-bottom:10px;"></div>
+<<<<<<< HEAD
                 <form id="payForm" class="form-grid" onsubmit="return submitPaymentForm(event)">
                     <input type="hidden" name="payment_id" id="f_pay_id">
                     <div>
@@ -343,6 +416,17 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         <input type="number" name="patient_serial" id="f_pay_serial" placeholder="Ref Serial" required>
                     </div>
                     <div style="grid-column: 1 / -1; display: flex; gap: 10px;">
+=======
+                <form action="../controller/adminController.php" method="POST" class="form-grid" onsubmit="return validatePaymentForm(event)">
+                    <input type="hidden" name="payment_id" id="f_pay_id">
+
+                    <input type="text" name="patient_name" id="f_pay_name" placeholder="Patient Name" required>
+                    <input type="text" name="phone_no" id="f_pay_phone" placeholder="Phone Number" required>
+                    <input type="number" step="0.01" name="amount" id="f_pay_amount" placeholder="Amount" required>
+                    <input type="number" name="patient_serial" id="f_pay_serial" placeholder="Ref Serial" required>
+
+                    <div style="grid-column: span 2;">
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                         <button type="submit" name="save_pay" class="btn-save">Save Transaction</button>
                         <button type="button" class="btn-cancel" onclick="closeModal('payModal')">Cancel</button>
                     </div>
@@ -350,6 +434,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
             </div>
         </div>
 
+<<<<<<< HEAD
         <div id="toastContainer" style="position: fixed; bottom: 20px; right: 20px; z-index: 10000;"></div>
 
         <script>
@@ -647,6 +732,9 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                 });
             }
 
+=======
+        <script>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
             // ============= VALIDATION HELPER FUNCTIONS =============
             function showError(errorDivId, messages) {
                 const errorDiv = document.getElementById(errorDivId);
@@ -919,7 +1007,11 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                 searchTerm = searchInput.value.trim();
 
                 if (!searchTerm) {
+<<<<<<< HEAD
                     showToast('Please enter a search term', 'error');
+=======
+                    alert('Please enter a search term');
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                     return;
                 }
 
@@ -931,6 +1023,7 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                     })
                     .catch(error => {
                         console.error('Search error:', error);
+<<<<<<< HEAD
                         showToast('Error performing search', 'error');
                     });
             }
@@ -944,6 +1037,9 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                     })
                     .catch(error => {
                         console.error('Error refreshing table:', error);
+=======
+                        alert('Error performing search');
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                     });
             }
 
@@ -955,7 +1051,11 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                     tableBody.innerHTML = '';
                     
                     if (data.length === 0) {
+<<<<<<< HEAD
                         tableBody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: #999;">No results found</td></tr>';
+=======
+                        tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: #999;">No results found</td></tr>';
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                         return;
                     }
 
@@ -964,15 +1064,22 @@ $successMsg = isset($_GET['msg']) ? $_GET['msg'] : '';
                         row.innerHTML = `
                             <td>${r.username}</td>
                             <td>${r.full_name}</td>
+<<<<<<< HEAD
                             <td>${r.nid}</td>
                             <td>${r.email}</td>
                             <td>${r.phone_no}</td>
                             <td>${r.address}</td>
+=======
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             <td>${r.password}</td>
                             <td>${r.role}</td>
                             <td>
                                 <button class="btn-edit" onclick='editUser(${JSON.stringify(r)})'>Edit</button>
+<<<<<<< HEAD
                                 <button class="btn-del" onclick="deleteRecord('users', '${encodeURIComponent(r.username)}')">Delete</button>
+=======
+                                <a href="../controller/adminController.php?type=users&del=${encodeURIComponent(r.username)}" class="btn-del">Delete</a>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
                             </td>
                         `;
                         tableBody.appendChild(row);

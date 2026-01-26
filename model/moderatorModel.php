@@ -54,4 +54,8 @@ function modSavePayment($pay_id, $d) {
         return mysqli_query($conn, "UPDATE payments SET patient_name='$n', phone_no='$ph', amount='$a', patient_serial='$s' WHERE payment_id='$pay_id'");
     }
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

@@ -13,11 +13,16 @@ function validateUser($username, $password) {
     $sql = "SELECT username, password, role FROM users WHERE username = '$user' LIMIT 1";
     $result = mysqli_query($conn, $sql);
 <<<<<<< HEAD
+<<<<<<< HEAD
    if ($result && mysqli_num_rows($result) > 0) {
 =======
 
     if ($result && mysqli_num_rows($result) > 0) {
 >>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+
+    if ($result && mysqli_num_rows($result) > 0) {
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
         $row = mysqli_fetch_assoc($result);
         
         // Plain-text comparison per your request
@@ -28,7 +33,11 @@ function validateUser($username, $password) {
     return false;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ?>
 =======
 ?>
 >>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+?>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

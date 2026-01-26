@@ -40,7 +40,11 @@ if (isset($_POST['save_pay'])) {
 header("Location: ../view/moderatorPage.php");
 exit();
 <<<<<<< HEAD
+<<<<<<< HEAD
 ?>
 =======
 ?>
 >>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+?>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

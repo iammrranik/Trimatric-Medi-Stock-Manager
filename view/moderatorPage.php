@@ -13,6 +13,7 @@ include_once '../model/moderatorModel.php';
     <title>Moderator Panel | Trimatric</title>
     <link rel="stylesheet" href="Design/moderatorDesign.css">
 </head>
+<<<<<<< HEAD
 <body>
 
 <div class="sidebar">
@@ -202,3 +203,7 @@ include_once '../model/moderatorModel.php';
 </script>
 </body>
 </html>
+=======
+
+</html>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
