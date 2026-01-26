@@ -51,4 +51,12 @@ body { display: flex; background-color: #f8fafc; }
 .btn-save:hover { background: #0f766e; }
 .btn-add { background: #0d9488; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
 .btn-edit { background: transparent; color: #0d9488; border: 1px solid #0d9488; padding: 5px 12px; border-radius: 4px; cursor: pointer; }
+<<<<<<< HEAD
+<<<<<<< HEAD
 .btn-edit:hover { background: #0d9488; color: white; }
+=======
+.btn-edit:hover { background: #0d9488; color: white; }
+>>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+.btn-edit:hover { background: #0d9488; color: white; }
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

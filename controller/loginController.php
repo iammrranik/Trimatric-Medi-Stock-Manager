@@ -21,8 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             setcookie("user_login", $userData['username'], time() + 1800, "/");
             setcookie("user_role", $userData['role'], time() + 1800, "/");
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+          // 3. Role-Based Redirection
+=======
 
         // 3. Role-Based Redirection
+>>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+
+        // 3. Role-Based Redirection
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
         if ($userData['role'] == 'Admin') {
             header("Location: ../view/adminPage.php");
         } elseif ($userData['role'] == 'Moderator') {
@@ -37,4 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+?>
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502

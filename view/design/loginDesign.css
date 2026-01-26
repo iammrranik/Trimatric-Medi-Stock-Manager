@@ -83,4 +83,12 @@ body {
 
 .footer-links { margin-top: 1.5rem; text-align: center; }
 .footer-links a { color: var(--primary-navy); text-decoration: none; font-size: 0.9rem; }
+<<<<<<< HEAD
+<<<<<<< HEAD
 .footer-links a:hover { text-decoration: underline; }
+=======
+.footer-links a:hover { text-decoration: underline; }
+>>>>>>> b8a7c4a (Added search functions and more validations)
+=======
+.footer-links a:hover { text-decoration: underline; }
+>>>>>>> b8a7c4abd6bc3ad98aa622459974fe6bc508f502
