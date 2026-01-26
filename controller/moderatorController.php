@@ -39,4 +39,8 @@ if (isset($_POST['save_pay'])) {
 // Default redirect
 header("Location: ../view/moderatorPage.php");
 exit();
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b8a7c4a (Added search functions and more validations)

@@ -21,7 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             setcookie("user_login", $userData['username'], time() + 1800, "/");
             setcookie("user_role", $userData['role'], time() + 1800, "/");
         }
+<<<<<<< HEAD
           // 3. Role-Based Redirection
+=======
+
+        // 3. Role-Based Redirection
+>>>>>>> b8a7c4a (Added search functions and more validations)
         if ($userData['role'] == 'Admin') {
             header("Location: ../view/adminPage.php");
         } elseif ($userData['role'] == 'Moderator') {
@@ -36,4 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> b8a7c4a (Added search functions and more validations)
