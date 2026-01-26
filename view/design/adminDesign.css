@@ -194,15 +194,43 @@ body {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    width: 400px;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-grid > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grid label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-grid input,
+.form-grid select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .modal-content input,
 .modal-content select {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -210,20 +238,18 @@ body {
 .btn-save {
     background: #2c3e50;
     color: white;
-    width: 100%;
+    flex: 1;
     padding: 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .btn-cancel {
-    width: 100%;
+    flex: 1;
     background: #eee;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -334,4 +360,26 @@ body {
 .btn-clear:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+/* ============= TOAST NOTIFICATIONS ============= */
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
 }
